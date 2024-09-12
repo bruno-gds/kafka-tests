@@ -1,4 +1,4 @@
-package com.brunocompany.kafkatests;
+package com.brunocompany.kafkatests.service;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class Consumer {
 
     @KafkaListener(topics = "teste", groupId = "x")
-    void receiveMessage(String message) {
+    public void receiveMessage(String message) {
         System.out.println("Consumer Message: " + message);
     }
 }

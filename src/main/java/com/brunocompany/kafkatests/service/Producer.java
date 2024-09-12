@@ -1,4 +1,4 @@
-package com.brunocompany.kafkatests;
+package com.brunocompany.kafkatests.service;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ public class Producer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    void sendMessage(String message) {
+    public void sendMessage(String message) {
         kafkaTemplate.send("teste", message);
     }
 }
