@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: "kafka-tests"
+  kafka:
+    bootstrap-servers: kafka:9092

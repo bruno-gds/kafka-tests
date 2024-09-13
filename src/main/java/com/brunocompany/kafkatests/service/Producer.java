@@ -13,7 +13,7 @@ public class Producer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void sendMessage(String message) {
-        kafkaTemplate.send("teste", message);
+    public void sendMessage(String text) {
+        kafkaTemplate.send("messages", text);
     }
 }

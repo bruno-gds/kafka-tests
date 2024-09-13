@@ -17,9 +17,10 @@ public class KafkaController {
         this.producerService = producerService;
     }
 
-    @GetMapping("/hello/{name}")
-    public String hello(@PathVariable("name") String name) {
-        producerService.sendMessage("Hello, " + name);
+    @GetMapping("/message/{text}")
+    public String hello(@PathVariable("text") String text) {
+        producerService.sendMessage(text);
+        System.out.println("--->>> Enviado para o Kafka - TEXT: " + text);
         return "OK";
     }
 }
