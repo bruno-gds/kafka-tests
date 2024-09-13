@@ -3,3 +3,7 @@ spring:
     name: "kafka-tests"
   kafka:
     bootstrap-servers: kafka:9092
+
+# VARIAVEIS DE AMBIENTE
+kafka:
+  topic: ${KAFKA_TOPIC:messages}

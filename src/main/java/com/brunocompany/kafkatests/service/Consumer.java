@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class Consumer {
 
-    @KafkaListener(topics = "messages", groupId = "messages-test")
+    @KafkaListener(topics = "${kafka.topic}", groupId = "messages-test")
     public void receiveMessage(String text) {
         System.out.println("<<<--- Recebendo do Kafka - TEXT: " + text);
     }
